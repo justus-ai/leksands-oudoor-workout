@@ -1,9 +1,9 @@
 # leksands-oudoor-workout
 ## SALES PITCH
 The goal is to stay active outside the traditional methods.
-Leksand is a found in the conuntryside in Sweden.It is very well known for its green forests, trails and perfect outdoors hence the name.(I cuurenty live there).
-The target will be the whole body for each workout in a playful and results evoking new style called Hiit(Hight Intensity Interval Training) .All these workouts can be done in the comfort of your home if  the weather doesn't allow but better yet outdoors.
-Body weight is the primary excercise tool .
+Leksand is a found in the conuntryside in Sweden.It is very well known for its green forests, trails and perfect outdoors hence why i thought the name was befitting.Lek means play and land means country in Swedish .
+The target will be the whole body for each workout in a playful and results evoking new style called Hiit(Hight Intensity Interval Training) .All these workouts can be done in the comfort of your home but if the weather allows, its better yet outdoors.
+ Your body weight is the primary excercise tool .
  ![Screenshot (362)](https://user-images.githubusercontent.com/83753891/136630706-94b7d235-df01-4775-b18e-e4d3c9ee5cd2.png)
  Responsive website feature for smaller screens for a screen as asmall as an iphone X
  ![Screenshot (364)](https://user-images.githubusercontent.com/83753891/136631475-0164689c-524f-4e22-b8f9-63385f2ddc3b.png)
@@ -11,11 +11,11 @@ Body weight is the primary excercise tool .
 ## FEATURES
 ### NAVIGATION BAR
 I used the responsive bootstrap navigation bar because it allows for the menu bar to be reduced and expanded easily depending on the screen size being used .
-In  smaller screena, I incooperated the hamburger icon that makes the text at the top disappear and is replaced by the three lines as is illuastrated above in the home page image.
+In  smaller screens, I incooperated the hamburger icon that makes the text at the top disappear and is replaced by the three lines as is illuastrated above in the home page image.
 ### HOME PAGE
 #### LOGO
-my website's logo is a chain link that i put before of every heading (h2) on each of the three pages <i class="fas fa-link">
-I chose it because the chain symbol symbolises strength.In this case, combining different styles to eleveate strength and conditioning  as i am going to illustrate later.
+my website's logo is a chain link that i put before every heading (h2) on each of the three pages <i class="fas fa-link">
+I chose it because the chainlynk symbol symbolises strength.In this case, combining different styles to eleveate strength and conditioning  as i am going to illustrate later.
 #### REASONS FOR WORKING OUT OUTSIDE
 1.The format is such that I have all the reasons for working out coming first ,then quotes and social media in that order.In the social media section, the user can click on whichever media link they are most comfortable with to see what we and our members are about .(The icons don't lead to actual pages but rather the websites the icons represent)
  
@@ -39,11 +39,11 @@ I chose it because the chain symbol symbolises strength.In this case, combining 
 ### ABOUT PAGE
  ![Screenshot (369)](https://user-images.githubusercontent.com/83753891/136634194-33a2ae53-fe3f-4cfe-901e-db6570a515df.png)
  
-1. This page goes deeper into details of what an outdoor workout routine would entail.Again this is regardless of location .With the entrace of the corna virus, alot of emphasis on keeping ones distance has made it such that anywhee you are is as good as you make it.
+1. This page goes deeper into details of what an outdoor workout routine would entail.Again this is regardless of location .With the entrace of the corona virus, alot of emphasis on keeping ones distance has made it such that anywhee you are is as good as you make it.
  2. I decided to divide the routines into 4 color coded(based on difficulty) sections with the help of battery icons at different percentage of usage to visualise how much intensity each program would entail.
  3. These excercises are entirely dependent on body weight and the patience of repetition to  guide the reader to results.
  4. The time that each person has available for working out everyday based on personal preference is for the user to decide and hence choose from the four categories.
-5. to maximise on space , each of the color coded program has a dropdown list of challenges styled with the help of bootstrap 5 that shows what each workout should entail.
+5. to maximise on space , each of the color coded programs has a dropdown list of challenges styled with the help of bootstrap 5 that shows what each workout should entail.
  ![Screenshot (370)](https://user-images.githubusercontent.com/83753891/136634276-90c6d17a-475e-4b8d-8b44-4f0c3ab25fc1.png)
 ![Screenshot (371)](https://user-images.githubusercontent.com/83753891/136634287-1f9e0258-bc32-45bd-ab1c-8a6265ba0da2.png)
  ![Screenshot (372)](https://user-images.githubusercontent.com/83753891/136634301-1861fad2-fec6-42e6-ac11-03ec4cc351b0.png)
@@ -57,10 +57,10 @@ I chose it because the chain symbol symbolises strength.In this case, combining 
  
   ### JOIN THE MOVEMENT PAGE
 ![Screenshot (324)](https://user-images.githubusercontent.com/83753891/131588066-2beef495-d94a-4d73-b272-9c06a0cdab89.png)
- The abave is a screenshot of my responsive join webpage. As metioned earlier,the code is inspired by the love running website from the tutorials that i thought were very effective  in getting one to join.The join age is essential to get mor people to waant to be a apart of active lifestyle.
- The form is responsive and can only be entered succecfully if the first name, second name and email are ALL entered .
+ The abave is a screenshot of my responsive join webpage. As metioned earlier,the code is inspired by the love running website from the tutorials that i thought were very effective  in getting one to join.The join page is essential to get more people to want to be a part of active lifestyle.
+ The form is responsive and can only be entered successfully if the first name, second name and email are ALL entered .
 ![Screenshot (323)](https://user-images.githubusercontent.com/83753891/131588088-0a04345b-8981-46c4-80aa-652548f01dd0.png)
- above the screenshot of how the join pag would look like ina mobile device .
+ above the screenshot of how the join page would look like on a mobile device .
  
  ####  Features left to implement 
  1.In the future i would like to add animation to the chain link so that it stretches to enhance user experience and to strengthen the presence of my logo.
@@ -70,7 +70,7 @@ I chose it because the chain symbol symbolises strength.In this case, combining 
  i tried to use flex but on closer inspection not all the text was displaying on the mobile phone screen, I had trouble trying to solve this bug .
  
    #VALIDATOR TESTING
-   I used the windoes  dev tools to check the performance of the website . No issues were detected 
+   I used the windows  dev tools to check the performance of the website . No issues were detected 
  ![Screenshot (375)](https://user-images.githubusercontent.com/83753891/136636483-5476267c-1588-4fc8-b5f8-e14c3a928ae1.png)
 
   
