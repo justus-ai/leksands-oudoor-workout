@@ -1,7 +1,7 @@
 # leksands-oudoor-workout
 ## SALES PITCH
 The goal is to stay active outside the traditional methods.
-Leksand is a found in the conuntryside in Sweden.It is very well known for its green forests, trails and perfect outdoors hence why i thought the name was befitting.Lek means play and land means country in Swedish .
+Leksand is a found in the countryside in Sweden.It is very well known for its green forests, trails and perfect outdoors hence why i thought the name was befitting.Lek means play and land means country in Swedish .
 The target will be the whole body for each workout in a playful and results evoking new style called Hiit(Hight Intensity Interval Training) .All these workouts can be done in the comfort of your home but if the weather allows, its better yet outdoors.
  Your body weight is the primary excercise tool .
  ![Screenshot (362)](https://user-images.githubusercontent.com/83753891/136630706-94b7d235-df01-4775-b18e-e4d3c9ee5cd2.png)
@@ -31,7 +31,7 @@ I chose it because the chainlynk symbol symbolises strength.In this case, combin
 ![Screenshot (367)](https://user-images.githubusercontent.com/83753891/136633379-5638d2de-f70b-4941-9c72-48612e017e43.png)
 
  #### SOCIAL MEDIA
- 1.Social media links to
+ 1.Social media links to:
  faceebook, instagram , linkedin,pinterest ,twitter  and youtube.
  2.All media icons are clickable and open in a new page associated with the media icon.
  3.I also included a hover effect to enhance UX.
@@ -67,7 +67,7 @@ I chose it because the chainlynk symbol symbolises strength.In this case, combin
  2. To have more workout routines to include different interest groups for those who dont like the outdoors or just body weight challenges.
 
  #### coding challenge 
- i tried to use flex but on closer inspection not all the text was displaying on the mobile phone screen, I had trouble trying to solve this bug .
+ I tried to use flex but on closer inspection not all the text was displaying on the mobile phone screen, I had trouble trying to solve this bug .
  
    #VALIDATOR TESTING
    I used the windows  dev tools to check the performance of the website . No issues were detected 
