@@ -1,8 +1,20 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Lexend:wght@100..900&display=swap');
 
-body { 
-    font-family:"Fraunces", sans-serif ;   
+/* CSS varieables */
+:root {
+    --primary-font: 'Italianno', serif;
+    --secondary-font: 'Lexend', sans-serif;
+    --nav-color: #e1d0a5;
+    --background-color: #fdfcfb;
+    --text-color: #41281a;
+    --text-hover-color: #836a5c;
+    --button-bg-color: #93402a;
+    --button-text-color: #fff;
+    --button-hover-color: #cd976f;   
+}
+
+
 }
 /* Containers */
   body {
