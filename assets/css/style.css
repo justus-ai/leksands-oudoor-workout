@@ -5,20 +5,34 @@ body {
     font-family:"Fraunces", sans-serif ;   
 }
 /* Containers */
-  
-  .menu-container  {
-    background-size: cover;
-      color:whitesmoke;
+  body {
+    font-family: var(--secondary-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-top: 120px; /* Pushes the top of the header down under fixed navbar*/
 }
-.navbar {
-background-color: black;
-text-align: center;
-position:relative;
+h1 {
+    font-weight: 500;
+}
+.btn-css {
+    border: none;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: small;
+}
+.btn-css:hover {
+    background-color: var(--button-hover-color);
+}
+.section {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
 
-}
-#navbar img {
-    width: 100px;
-}
+
+
 
 .reasons-container {
     background: url("../images/forest.jpg") no-repeat bottom right fixed;
