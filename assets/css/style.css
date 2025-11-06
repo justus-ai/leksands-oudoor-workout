@@ -10,6 +10,7 @@ body {
 }
 .navbar {
 background-color: black;
+text-align: center;
 position:relative;
 
 }
@@ -146,4 +147,46 @@ border-radius:2px;
   background-size: cover;
   background-position: center;
   height: 900px;
+}
+/* Media Queries */
+
+
+/* For screen size (576px and up) */
+@media screen and (min-width: 576px) {
+    #contact .welcome {
+        font-size: 2.5rem;
+    }
+}
+
+/* For screen size (768px and up) */
+@media screen and (min-width: 768px) {
+    .btn-css {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 16px;
+    }
+    .all-spa {
+        font-size: 26px;
+    }
+    #navbar img {
+        width: 349px;
+        height: 113px;
+    }
+    .section {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+
+/* For large screen size (992px and up) */
+@media screen and (min-width: 992px) {
+    #contact {
+        text-align: left;
+    }
+    #contact .welcome {
+        font-size: 4rem;
+        margin-top: 20px;
+    }
 }
