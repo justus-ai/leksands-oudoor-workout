@@ -42,7 +42,7 @@ h1 {
 }
 /* Navbar */
 .navbar {
-    background-color: black;
+    background-color:var(--nav-color);
     text-align: center;
 }
 #navbar img {
