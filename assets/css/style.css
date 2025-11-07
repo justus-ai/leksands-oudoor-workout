@@ -14,13 +14,14 @@
     --button-hover-color: #cd976f;   
 }
 
-/* Containers */
+/* Containers 
   body {
     font-family: var(--secondary-font);
     background-color: var(--background-color);
     color: var(--text-color);
     padding-top: 120px; /* Pushes the top of the header down under fixed navbar*/
 }
+ */
 h1 {
     font-weight: 500;
 }
@@ -65,6 +66,16 @@ color: whitesmoke;
 margin-top: 0px,0px;
 
 }
+/* Customer reviews section */
+/*
+.img-reviews {
+    max-width: 100px;
+    border-radius: 50%;
+}
+.blockquote-footer {
+    color: var(--text-color);
+}
+*/
 
 .quotes-container {
     color:whitesmoke;
