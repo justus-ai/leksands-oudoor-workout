@@ -6,7 +6,7 @@
     --primary-font: 'Italianno', serif;
     --secondary-font: 'Lexend', sans-serif;
     --nav-color: ##3E4041;
-    --background-color: #fdfcfb;
+    --background-color: #url("../images/forest.jpg") no-repeat bottom right fixed;
     --text-color: ##FFFFFF;
     --text-hover-color: #836a5c;
     --button-bg-color: #93402a;
