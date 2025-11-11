@@ -17,31 +17,31 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
-<body>
-<div   class=" menu-container" class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link active" href="join.html" aria-expanded="false">
-                  Join the movement
-                </a>
-        
-            </ul>
-           
-          </div>
-        </div>
-      </nav>
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="assets/images/logo.webp.webp" class="img-reviews" alt="Leksand's Outdoor Workout Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- ms-auto will push all nav items to the right -->
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="join.html" class="btn ms-lg-3 btn-css">join</a>
+          </li>
+
+        </ul>
+      </div>
     </div>
+  </nav>
+<body>
+
      <!--the sign up page for the  workout outside-->
      <div  class =" container-fluid reasons-container">
       <div class="row">
@@ -128,5 +128,6 @@
   <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
   <!-- This code was taken from the CL Boardwalk Games project -->
   <script src="assets/js/script.js"></script>
+  </body>
 
 </html>
