@@ -1,75 +1,77 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Lexend:wght@100..900&display=swap');
 
-/* CSS varieables */
+/* CSS variables */
 :root {
     --primary-font: 'Italianno', serif;
     --secondary-font: 'Lexend', sans-serif;
-    --nav-color: ##3E4041;
-    --background-color: #url("../images/forest.jpg") no-repeat bottom right fixed;
-    --text-color: ##FFFFFF;
+    --nav-color: #3E4041;
+    --background-image: url("../images/forest.jpg");
+    --text-color: #FFFFFF;
     --text-hover-color: #836a5c;
     --button-bg-color: #93402a;
     --button-text-color: #fff;
     --button-hover-color: #cd976f;   
 }
 
-
-  body {
+body {
     font-family: var(--secondary-font);
-    background-color: var(--background-color);
     color: var(--text-color);
-    padding-top: 120px; /* Pushes the top of the header down under fixed navbar*/
+    padding-top: 120px; /* Pushes the top of the header down under fixed navbar */
+    margin: 0;
+    background-color: #111; /* fallback color */
 }
- 
+
+/* Headings */
 h1 {
     font-weight: 500;
 }
+
+/* Buttons */
 .btn-css {
     border: none;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     text-transform: uppercase;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 8px 12px;
     font-size: small;
+    cursor: pointer;
 }
-.btn-css:hover {
+.btn-css:hover,
+.btn-css:focus {
     background-color: var(--button-hover-color);
+    outline: none;
 }
+
+/* Sections */
 .section {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
+
 /* Navbar */
 .navbar {
-    background-color:var(--nav-color);
+    background-color: var(--nav-color);
     text-align: center;
 }
 #navbar img {
-    display: flex;
-   max-width: 90px;
+    display: block;
+    max-width: 90px;
+    height: auto;
     border-radius: 50%;
-    }
+}
 
-
-
-
-
+/* Reasons / background section */
 .reasons-container {
-    background: url("../images/forest.jpg") no-repeat bottom right fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: var(--background-image) no-repeat bottom right fixed;
     background-size: cover;
     text-align: center;
     min-height: 100vh;
-color: whitesmoke;
-margin-top: 0px,0px;
-
+    color: whitesmoke;
+    margin-top: 0;
 }
-/* Customer reviews section */
 
+/* Customer reviews section */
 .img-reviews {
     max-width: 80px;
     border-radius: 50%;
@@ -79,125 +81,136 @@ margin-top: 0px,0px;
 }
 
 .quotes-container {
-    color:whitesmoke;
+    color: whitesmoke;
     background-color: rgb(34, 34, 34);
     font-weight: 400;
-font-size: small; 
-text-align: center;
-border-radius: 35%;
+    font-size: small; 
+    text-align: center;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
-  
-  
-  .quotes-container:hover {
-    background-color:#0c0c0c;
+.quotes-container:hover,
+.quotes-container:focus {
+    background-color: #0c0c0c;
     color: #e84610;
-  }   
+}
 
+/* Social media area */
 .social-media-container { 
     text-align: center;
     justify-content: center; 
 }
-/* social links*/
 .social-links {
     padding-bottom: 1px;
+    margin: 0;
+    list-style: none;
 }
-
+.social-links li {
+    display: inline-block;
+    margin: 0 6px;
+}
 .social-links li a i {
     width: 45px;
     height: 45px;
-    padding: 12px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     font-size: 18px;
-    line-height: 7px;
-    text-align: center;
+    line-height: 1;
     color: #fafafa;
     background: #313131;
-    text-shadow: lavender;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-
+    transition: background 0.35s ease-in-out, transform 0.2s ease;
+    text-decoration: none;
 }
-
-.social-links li a i:hover {
+.social-links li a i:hover,
+.social-links li a i:focus {
     background: #e84610;
+    transform: translateY(-2px);
+    outline: none;
 }
-/*jumbotron*/
+
+/* Jumbotron / hero */
 .jumbotron-header {
-color:white ;
-margin-bottom:20px;
-text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
 }
-.jumbotron p  {
-    color:rgb(239, 239, 250) ;
-    margin-bottom:20px;
+.jumbotron p {
+    color: rgb(239, 239, 250);
+    margin-bottom: 20px;
     font-weight: 900;
     font-size: larger;
     text-align: center;
-    border-radius: 50%;
-
-    }
-    .jumbotron p:hover {
-        background-color:#0f0f0f;
-        color: #e84610;
-      }   
-    /*join us*/
-    .signup-form
-{
-    margin-top: 20px;
-    color:#fff;
-    background-color:rgba(60, 60, 60, 0.6);
-    max-width:flex;
-    position:auto;
-    align-items:center;
-    padding: 30px;
-    border-radius: 70%;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
 }
-.signup-form h2 {
-    color:#fafafa;
-    margin-bottom:20px;
-    
-}
-.text-input {
-background:transparent;
-color:#fafafa;
-width:88%;
-height:25px;
-margin:5px 0 20px 0;
-border:1px solid #fafafa;
-border-radius:2px;
-    
-}
-.text-input:hover {
-    border-color:#e84610;
-}
-.join-button  {
-    margin-top:20px;
-    border-radius:2px;
-    padding: 15px 32px 15px 32px ;
-    text-align: flex;
-    font-size:100%;
-    background-color:#e84610;
-    color:#fafafa;
-    display:center;
-
-}
-.join-button:hover {
-    background-color:#fafafa;
+.jumbotron p:hover,
+.jumbotron p:focus {
+    background-color: #0f0f0f;
     color: #e84610;
 }
-/* join the movement Form */
 
-.form-section {
-  clear: center;
-  background-size: cover;
-  background-position: center;
-  height: 900px;
+/* Signup / form block */
+.signup-form {
+    margin: 20px auto;
+    color: #fff;
+    background-color: rgba(60, 60, 60, 0.6);
+    max-width: 520px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 12px;
+    box-sizing: border-box;
 }
+.signup-form h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 4px;
+    padding: 6px 8px;
+    box-sizing: border-box;
+}
+.text-input:hover,
+.text-input:focus {
+    border-color: #e84610;
+    outline: none;
+}
+.join-button {
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 12px 30px;
+    text-align: center;
+    font-size: 100%;
+    background-color: #e84610;
+    color: #fafafa;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+.join-button:hover,
+.join-button:focus {
+    background-color: #fafafa;
+    color: #e84610;
+    outline: 3px solid rgba(232, 70, 16, 0.12);
+}
+
+/* Join the movement Form */
+.form-section {
+    clear: both;
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+}
+
 /* Media Queries */
-
-
 /* For screen size (576px and up) */
 @media screen and (min-width: 576px) {
     #contact .welcome {
@@ -217,15 +230,14 @@ border-radius:2px;
     }
     #navbar img {
         width: 349px;
-        height: 113px;
+        height: auto;
+        max-width: none;
     }
     .section {
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
-
 }
-
 
 /* For large screen size (992px and up) */
 @media screen and (min-width: 992px) {
