@@ -60,6 +60,14 @@ h1 {
     height: auto;
     border-radius: 50%;
 }
+#navbar .navbar-brand img,
+#navbar img {
+  display: block;        /* avoid inline spacing issues */
+  max-height: 56px;      /* change this value to fit your navbar height */
+  width: auto;           /* keep natural aspect ratio */
+  height: auto;
+  object-fit: contain;   /* ensures the image scales without cropping */
+}
 
 /* Reasons / background section */
 .reasons-container {
