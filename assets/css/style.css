@@ -107,13 +107,17 @@ h1 {
     justify-content: center; 
 }
 .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding-left: 0;
     padding-bottom: 1px;
     margin: 0;
     list-style: none;
 }
 .social-links li {
-    display: inline-block;
-    margin: 0 6px;
+    margin: 0.25rem;
 }
 .social-links li a i {
     width: 45px;
@@ -133,6 +137,13 @@ h1 {
     background: #e84610;
     transform: translateY(-2px);
     outline: none;
+}
+@media (max-width: 576px) {
+  .social-links li a i {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
 }
 
 /* Jumbotron / hero */
@@ -277,39 +288,6 @@ h1 {
   .reasons-container {
     background-attachment: scroll !important;
     background-position: center !important;
-  }
-}
-
-/* Responsive social links: wrap and increase spacing/touch area */
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  padding-left: 0;
-  list-style: none;
-  margin: 0;
-}
-.social-links li {
-  margin: 0.25rem;
-}
-.social-links li a i {
-  width: 45px;
-  height: 45px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 18px;
-  color: #fafafa;
-  background: #313131;
-  transition: background 0.35s, transform 0.2s;
-}
-@media (max-width: 576px) {
-  .social-links li a i {
-    width: 52px;
-    height: 52px;
-    font-size: 20px;
   }
 }
 
