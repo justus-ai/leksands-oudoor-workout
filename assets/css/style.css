@@ -107,13 +107,17 @@ h1 {
     justify-content: center; 
 }
 .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding-left: 0;
     padding-bottom: 1px;
     margin: 0;
     list-style: none;
 }
 .social-links li {
-    display: inline-block;
-    margin: 0 6px;
+    margin: 0.25rem;
 }
 .social-links li a i {
     width: 45px;
@@ -133,6 +137,13 @@ h1 {
     background: #e84610;
     transform: translateY(-2px);
     outline: none;
+}
+@media (max-width: 576px) {
+  .social-links li a i {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
 }
 
 /* Jumbotron / hero */
@@ -255,4 +266,27 @@ h1 {
     #navbar img {
         max-height: 80px; /* largest on very wide screens */
     }
+}
+
+/* --- fixes for dropdown clipping, stacking, and social links on mobile/tablet --- */
+
+/* Prevent clipping of dropdowns from ancestors */
+.reasons-container,
+.signup-form,
+.jumbotron,
+.callout {
+  overflow: visible !important;
+}
+
+/* Ensure dropdown menus appear above fixed-top navbar and other contexts */
+.dropdown-menu {
+  z-index: 3000 !important;
+}
+
+/* Avoid background-attachment: fixed on mobile/tablet (iOS rendering issues) */
+@media (max-width: 1024px) {
+  .reasons-container {
+    background-attachment: scroll !important;
+    background-position: center !important;
+  }
 }
