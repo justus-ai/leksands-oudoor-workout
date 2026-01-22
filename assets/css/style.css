@@ -273,6 +273,7 @@ h1 {
 }
 
 /* Avoid background-attachment: fixed on mobile/tablet (iOS rendering issues) */
+/* Note: about.html overrides this with background image in embedded styles */
 @media (max-width: 1024px) {
   .reasons-container {
     background-attachment: scroll !important;
@@ -310,12 +311,5 @@ h1 {
     width: 52px;
     height: 52px;
     font-size: 20px;
-  }
-}
-
-/* Optional: force dropdowns to position fixed on small screens to escape stacking contexts */
-@media (max-width: 1024px) {
-  .dropdown-menu {
-    position: absolute; /* bootstrap default; if still clipped, change to fixed and adjust top/right */
   }
 }
