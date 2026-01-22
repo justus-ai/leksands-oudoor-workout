@@ -290,10 +290,3 @@ h1 {
     background-position: center !important;
   }
 }
-
-/* Optional: force dropdowns to position fixed on small screens to escape stacking contexts */
-@media (max-width: 1024px) {
-  .dropdown-menu {
-    position: absolute; /* bootstrap default; if still clipped, change to fixed and adjust top/right */
-  }
-}
