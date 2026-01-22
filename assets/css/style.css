@@ -256,3 +256,66 @@ h1 {
         max-height: 80px; /* largest on very wide screens */
     }
 }
+
+/* --- fixes for dropdown clipping, stacking, and social links on mobile/tablet --- */
+
+/* Prevent clipping of dropdowns from ancestors */
+.reasons-container,
+.signup-form,
+.jumbotron,
+.callout {
+  overflow: visible !important;
+}
+
+/* Ensure dropdown menus appear above fixed-top navbar and other contexts */
+.dropdown-menu {
+  z-index: 3000 !important;
+}
+
+/* Avoid background-attachment: fixed on mobile/tablet (iOS rendering issues) */
+@media (max-width: 1024px) {
+  .reasons-container {
+    background-attachment: scroll !important;
+    background-position: center !important;
+  }
+}
+
+/* Responsive social links: wrap and increase spacing/touch area */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+.social-links li {
+  margin: 0.25rem;
+}
+.social-links li a i {
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fafafa;
+  background: #313131;
+  transition: background 0.35s, transform 0.2s;
+}
+@media (max-width: 576px) {
+  .social-links li a i {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+}
+
+/* Optional: force dropdowns to position fixed on small screens to escape stacking contexts */
+@media (max-width: 1024px) {
+  .dropdown-menu {
+    position: absolute; /* bootstrap default; if still clipped, change to fixed and adjust top/right */
+  }
+}
