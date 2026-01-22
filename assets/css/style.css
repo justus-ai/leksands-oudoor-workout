@@ -3,285 +3,127 @@
 
 /* CSS variables */
 :root {
-    --primary-font: 'Italianno', serif;
-    --secondary-font: 'Lexend', sans-serif;
-    --nav-color: #3E4041;
-    --background-image: url("../images/forest.jpg");
-    --text-color: #FFFFFF;
-    --text-hover-color: #836a5c;
-    --button-bg-color: #93402a;
-    --button-text-color: #fff;
-    --button-hover-color: #cd976f;   
+  --primary-font: 'Italianno', serif;
+  --secondary-font: 'Lexend', sans-serif;
+  --nav-color: #3E4041;
+  --background-image: url("../images/forest.jpg");
+  --text-color: #FFFFFF;
+  --text-hover-color: #836a5c;
+  --button-bg-color: #93402a;
+  --button-text-color: #fff;
+  --button-hover-color: #cd976f;
+  --navbar-height: 90px;        /* adjust to actual navbar height */
+  --dropdown-z: 3000;
+  --social-size: 45px;
+  --social-size-sm: 52px;
+  --social-bg: #313131;
+  --social-color: #fafafa;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
-    font-family: var(--secondary-font);
-    color: var(--text-color);
-    padding-top: 90px; /* space for fixed navbar */
-    margin: 0;
-    background: var(--background-image) no-repeat center center fixed;
-    background-size: cover;
+  font-family: var(--secondary-font);
+  color: var(--text-color);
+  padding-top: var(--navbar-height);
+  margin: 0;
+  background: var(--background-image) no-repeat center center;
+  background-size: cover;
+  /* avoid fixed background on small/touch devices; enable on large screens only */
+  background-attachment: scroll;
+}
+
+/* enable fixed background on larger screens for effect */
+@media (min-width: 1025px) {
+  body {
+    background-attachment: fixed;
+  }
 }
 
 /* Headings */
 h1 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 /* Buttons */
 .btn-css {
-    border: none;
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    text-transform: uppercase;
-    padding: 8px 12px;
-    font-size: small;
-    cursor: pointer;
+  border: none;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  text-transform: uppercase;
+  padding: 8px 12px;
+  font-size: small;
+  cursor: pointer;
 }
 .btn-css:hover,
 .btn-css:focus {
-    background-color: var(--button-hover-color);
-    outline: none;
+  background-color: var(--button-hover-color);
+  outline: none;
 }
 
 /* Sections */
 .section {
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Navbar */
 .navbar {
-    background-color: var(--nav-color);
-    text-align: center;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+  background-color: var(--nav-color);
+  text-align: center;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 #navbar .navbar-brand img,
 #navbar img {
-    display: block;
-    max-height: 40px; /* smaller default for responsiveness */
-    width: auto;
-    height: auto;
-    object-fit: contain;
+  display: block;
+  max-height: 40px; /* smaller default for responsiveness; overridden at breakpoints */
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Reasons / background section */
 .reasons-container {
-    /* keep section transparent now that body has the global background */
-    background: transparent;
-    text-align: center;
-    min-height: 100vh;
-    color: whitesmoke;
-    margin-top: 0;
+  background: transparent; /* body has global background now */
+  text-align: center;
+  min-height: 100vh;
+  color: whitesmoke;
+  margin-top: 0;
 }
 
 /* Customer reviews section */
 .img-reviews {
-    max-width: 80px;
-    border-radius: 50%;
+  max-width: 80px;
+  border-radius: 50%;
 }
 .blockquote-footer {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .quotes-container {
-    color: whitesmoke;
-    background-color: rgb(34, 34, 34);
-    font-weight: 400;
-    font-size: small; 
-    text-align: center;
-    border-radius: 12px;
-    padding: 1rem;
-    transition: background-color 0.25s ease, color 0.25s ease;
+  color: whitesmoke;
+  background-color: rgb(34, 34, 34);
+  font-weight: 400;
+  font-size: small;
+  text-align: center;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 .quotes-container:hover,
 .quotes-container:focus {
-    background-color: #0c0c0c;
-    color: #e84610;
+  background-color: #0c0c0c;
+  color: #e84610;
 }
 
-/* Social media area */
-.social-media-container { 
-    text-align: center;
-    justify-content: center; 
+/* Social media area - consolidated & responsive */
+.social-media-container {
+  text-align: center;
+  justify-content: center;
 }
-.social-links {
-    padding-bottom: 1px;
-    margin: 0;
-    list-style: none;
-}
-.social-links li {
-    display: inline-block;
-    margin: 0 6px;
-}
-.social-links li a i {
-    width: 45px;
-    height: 45px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 18px;
-    line-height: 1;
-    color: #fafafa;
-    background: #313131;
-    transition: background 0.35s ease-in-out, transform 0.2s ease;
-}
-.social-links li a i:hover,
-.social-links li a i:focus {
-    background: #e84610;
-    transform: translateY(-2px);
-    outline: none;
-}
-
-/* Jumbotron / hero */
-.jumbotron-header {
-    color: white;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.jumbotron p {
-    color: rgb(239, 239, 250);
-    margin-bottom: 20px;
-    font-weight: 900;
-    font-size: larger;
-    text-align: center;
-    border-radius: 8px;
-    padding: 0.4rem 0.8rem;
-}
-.jumbotron p:hover,
-.jumbotron p:focus {
-    background-color: #0f0f0f;
-    color: #e84610;
-}
-
-/* Signup / form block */
-.signup-form {
-    margin: 20px auto;
-    color: #fff;
-    background-color: rgba(60, 60, 60, 0.6);
-    max-width: 520px;
-    width: 90%;
-    padding: 30px;
-    border-radius: 12px;
-    box-sizing: border-box;
-}
-.signup-form h2 {
-    color: #fafafa;
-    margin-bottom: 20px;
-}
-.text-input {
-    background: transparent;
-    color: #fafafa;
-    width: 100%;
-    height: 40px;
-    margin: 5px 0 20px 0;
-    border: 1px solid #fafafa;
-    border-radius: 4px;
-    padding: 6px 8px;
-    box-sizing: border-box;
-}
-.text-input:hover,
-.text-input:focus {
-    border-color: #e84610;
-    outline: none;
-}
-.join-button {
-    margin-top: 20px;
-    border-radius: 4px;
-    padding: 12px 30px;
-    text-align: center;
-    font-size: 100%;
-    background-color: #e84610;
-    color: #fafafa;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-}
-.join-button:hover,
-.join-button:focus {
-    background-color: #fafafa;
-    color: #e84610;
-    outline: 3px solid rgba(232, 70, 16, 0.12);
-}
-
-/* Join the movement Form */
-.form-section {
-    clear: both;
-    background-size: cover;
-    background-position: center;
-    min-height: 600px;
-}
-
-/* Media Queries */
-/* For screen size (576px and up) */
-@media screen and (min-width: 576px) {
-    #contact .welcome {
-        font-size: 2.5rem;
-    }
-}
-
-/* For screen size (768px and up) */
-@media screen and (min-width: 768px) {
-    .btn-css {
-        padding-left: 20px;
-        padding-right: 20px;
-        font-size: 16px;
-    }
-    .all-spa {
-        font-size: 26px;
-    }
-    #navbar .navbar-brand img,
-    #navbar img {
-        max-height: 64px; /* larger on wider screens */
-    }
-    .section {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
-}
-
-/* For large screen size (992px and up) */
-@media screen and (min-width: 992px) {
-    #contact {
-        text-align: left;
-    }
-    #contact .welcome {
-        font-size: 4rem;
-        margin-top: 20px;
-    }
-    #navbar .navbar-brand img,
-    #navbar img {
-        max-height: 80px; /* largest on very wide screens */
-    }
-}
-
-/* --- fixes for dropdown clipping, stacking, and social links on mobile/tablet --- */
-
-/* Prevent clipping of dropdowns from ancestors */
-.reasons-container,
-.signup-form,
-.jumbotron,
-.callout {
-  overflow: visible !important;
-}
-
-/* Ensure dropdown menus appear above fixed-top navbar and other contexts */
-.dropdown-menu {
-  z-index: 3000 !important;
-}
-
-/* Avoid background-attachment: fixed on mobile/tablet (iOS rendering issues) */
-/* Note: about.html overrides this with background image in embedded styles */
-@media (max-width: 1024px) {
-  .reasons-container {
-    background-attachment: scroll !important;
-    background-position: center !important;
-  }
-}
-
-/* Responsive social links: wrap and increase spacing/touch area */
 .social-links {
   display: flex;
   justify-content: center;
@@ -293,23 +135,176 @@ h1 {
 }
 .social-links li {
   margin: 0.25rem;
+  display: inline-block;
 }
 .social-links li a i {
-  width: 45px;
-  height: 45px;
+  width: var(--social-size);
+  height: var(--social-size);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   font-size: 18px;
-  color: #fafafa;
-  background: #313131;
-  transition: background 0.35s, transform 0.2s;
+  line-height: 1;
+  color: var(--social-color);
+  background: var(--social-bg);
+  transition: background 0.35s ease-in-out, transform 0.2s ease;
+}
+.social-links li a i:hover,
+.social-links li a i:focus {
+  background: #e84610;
+  transform: translateY(-2px);
+  outline: none;
 }
 @media (max-width: 576px) {
   .social-links li a i {
-    width: 52px;
-    height: 52px;
+    width: var(--social-size-sm);
+    height: var(--social-size-sm);
     font-size: 20px;
+  }
+}
+
+/* Jumbotron / hero */
+.jumbotron-header {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.jumbotron p {
+  color: rgb(239, 239, 250);
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: larger;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+}
+.jumbotron p:hover,
+.jumbotron p:focus {
+  background-color: #0f0f0f;
+  color: #e84610;
+}
+
+/* Signup / form block */
+.signup-form {
+  margin: 20px auto;
+  color: #fff;
+  background-color: rgba(60, 60, 60, 0.6);
+  max-width: 520px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.signup-form h2 {
+  color: #fafafa;
+  margin-bottom: 20px;
+}
+.text-input {
+  background: transparent;
+  color: #fafafa;
+  width: 100%;
+  height: 40px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #fafafa;
+  border-radius: 4px;
+  padding: 6px 8px;
+  box-sizing: border-box;
+}
+.text-input:hover,
+.text-input:focus {
+  border-color: #e84610;
+  outline: none;
+}
+.join-button {
+  margin-top: 20px;
+  border-radius: 4px;
+  padding: 12px 30px;
+  text-align: center;
+  font-size: 100%;
+  background-color: #e84610;
+  color: #fafafa;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+.join-button:hover,
+.join-button:focus {
+  background-color: #fafafa;
+  color: #e84610;
+  outline: 3px solid rgba(232, 70, 16, 0.12);
+}
+
+/* Join the movement Form */
+.form-section {
+  clear: both;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+}
+
+/* Media Queries - grouped */
+@media screen and (min-width: 576px) {
+  #contact .welcome {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-css {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+  }
+  .all-spa {
+    font-size: 26px;
+  }
+  #navbar .navbar-brand img,
+  #navbar img {
+    max-height: 64px;
+  }
+  .section {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #contact {
+    text-align: left;
+  }
+  #contact .welcome {
+    font-size: 4rem;
+    margin-top: 20px;
+  }
+  #navbar .navbar-brand img,
+  #navbar img {
+    max-height: 80px;
+  }
+}
+
+/* --- dropdown & clipping fixes (single place) --- */
+/* Prevent clipping of dropdowns from ancestors (applies globally) */
+.reasons-container,
+.signup-form,
+.jumbotron,
+.callout {
+  overflow: visible !important;
+}
+
+/* Ensure dropdown menus appear above fixed-top navbar and other contexts */
+.dropdown-menu {
+  z-index: var(--dropdown-z) !important;
+}
+
+/* Avoid background-attachment: fixed on mobile/tablet (iOS rendering issues) */
+@media (max-width: 1024px) {
+  .reasons-container {
+    background-attachment: scroll !important;
+    background-position: center !important;
+  }
+  /* if dropdowns still clip, consider switching to fixed and positioning via top/right */
+  .dropdown-menu {
+    position: absolute;
   }
 }
