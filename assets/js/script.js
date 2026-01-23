@@ -22,3 +22,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+(function(){
+  const sl = document.querySelector('.social-links');
+  console.log('social-links found:', !!sl);
+  if (!sl) return;
+  console.log('children:', sl.childElementCount);
+  console.log('social-links computed:', {
+    display: getComputedStyle(sl).display,
+    visibility: getComputedStyle(sl).visibility,
+    opacity: getComputedStyle(sl).opacity,
+    height: getComputedStyle(sl).height,
+    maxHeight: getComputedStyle(sl).maxHeight
+  });
+
+  const i = sl.querySelector('i');
+  console.log('first <i> found:', !!i);
+  if (i) console.log('icon classes:', i.className, 'font-family:', getComputedStyle(i).fontFamily, 'color:', getComputedStyle(i).color);
+
+  // walk ancestors to find clipping/stacking rules
+  let node = sl;
+  while (node) {
+    console.log(node.tagName, 'class=' + node.className, 'display=' + getComputedStyle(node).display,
+      'overflow=' + getComputedStyle(node).overflow, 'position=' + getComputedStyle(node).position, 'transform=' + getComputedStyle(node).transform, 'z-index=' + getComputedStyle(node).zIndex);
+    node = node.parentElement;
+  }
+})();
