@@ -217,16 +217,16 @@ footer#contact,
 /* Icon sizing: let icons scale inside the circular anchor */
 .social-links li a i,
 .social-links li a svg {
-  width: 60%;
-  height: 60%;
+ width: 45px;
+  height: 45px;
   display: inline-flex;
-  align.items: center;
+  align-items: center;
   justify-content: center;
   border-radius: 50%;
-  
-  line-height: 1;
   font-size: 18px;
-  fill: currentColor;
+  color: #fafafa;
+  background: #313131;
+  transition: background 0.35s, transform 0.2s; 
 }
 
 /* Small screens: enlarge touch targets */
