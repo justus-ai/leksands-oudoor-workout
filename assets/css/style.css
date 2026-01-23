@@ -1,14 +1,38 @@
-/* Google fonts import */
-/* CSS variables */
+:root {
+  --primary-font: 'Italianno', serif;
+  --secondary-font: 'Lexend', sans-serif;
+  --nav-color: #3E4041;
+  --background-image: url("../images/forest.jpg");
+  --text-color: #FFFFFF;
+  --text-hover-color: #836a5c;
+  --button-bg-color: #93402a;
+  --button-text-color: #fff;
+  --button-hover-color: #cd976f;
+  --navbar-height: 90px;
+  --dropdown-z: 3000; /* dropdowns above normal content */
+  --footer-z: 2000;   /* footer above content but below dropdowns/modals */
+  --social-size: 45px;
+  --social-size-sm: 52px;
+  --social-bg: #313131;
+  --social-color: #fafafa;
+}
+
+/* --------------------
+   Base / layout
+   -------------------- */
+html, body { height: 100%; }
+
 body {
   font-family: var(--secondary-font);
   color: var(--text-color);
   padding-top: var(--navbar-height);
   margin: 0;
-  background: none; /* moved to pseudo element */
+  background: none; /* background moved to pseudo-element below */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Place the background image behind all content using a fixed pseudo-element */
+/* Background placed behind everything to avoid stacking/context issues */
 body::before {
   content: "";
   position: fixed;
@@ -17,54 +41,180 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index: -1;               /* behind everything */
-  pointer-events: none;      /* don't intercept clicks */
-  will-change: transform;
+  z-index: -1;            /* sits behind page content */
+  pointer-events: none;   /* doesn't intercept clicks */
 }
 
-/* --- Footer / social stacking & layout --- */
+/* Optional: make pseudo-element non-fixed on small screens for better perf/UX */
+@media (max-width: 768px) {
+  body::before { position: absolute; }
+}
+
+/* Headings */
+h1 { font-weight: 500; }
+
+/* --------------------
+   Buttons
+   -------------------- */
+.btn-css {
+  border: none;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  text-transform: uppercase;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.btn-css:hover,
+.btn-css:focus {
+  background-color: var(--button-hover-color);
+  outline: none;
+}
+
+/* --------------------
+   Sections & utility
+   -------------------- */
+.section { margin: 1.5rem 0 2rem; }
+
+/* --------------------
+   Navbar
+   -------------------- */
+.navbar {
+  background-color: var(--nav-color);
+  text-align: center;
+  padding: 0.4rem 0;
+}
+#navbar .navbar-brand img,
+#navbar img {
+  display: block;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* --------------------
+   Reasons / hero
+   -------------------- */
+.reasons-container {
+  background: transparent;
+  text-align: center;
+  min-height: 100vh;
+  color: whitesmoke;
+  margin-top: 0;
+}
+
+/* --------------------
+   Quotes / testimonials
+   -------------------- */
+.quotes-container {
+  color: whitesmoke;
+  background-color: rgb(34,34,34);
+  font-weight: 400;
+  font-size: 0.95rem;
+  text-align: center;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.quotes-container:hover,
+.quotes-container:focus {
+  background-color: #0c0c0c;
+  color: #e84610;
+}
+
+/* --------------------
+   Signup / form block
+   -------------------- */
+.signup-form {
+  margin: 20px auto;
+  color: #fff;
+  background-color: rgba(60,60,60,0.6);
+  max-width: 520px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.signup-form h2 { color: #fafafa; margin-bottom: 20px; }
+
+.text-input {
+  background: transparent;
+  color: #fafafa;
+  width: 100%;
+  height: 40px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #fafafa;
+  border-radius: 4px;
+  padding: 6px 8px;
+  box-sizing: border-box;
+}
+.text-input:focus { border-color: #e84610; outline: none; }
+
+.join-button {
+  margin-top: 20px;
+  border-radius: 4px;
+  padding: 12px 30px;
+  background-color: #e84610;
+  color: #fafafa;
+  border: none;
+  cursor: pointer;
+}
+.join-button:hover,
+.join-button:focus {
+  background-color: #fafafa;
+  color: #e84610;
+  outline: 3px solid rgba(232,70,16,0.12);
+}
+
+/* --------------------
+   Social links (consolidated)
+   -------------------- */
 footer#contact,
 .social-media-container {
-  position: relative; /* creates intended stacking context */
-  z-index: 2000;      /* high enough for visibility, below dropdowns/modals */
+  position: relative;
+  z-index: var(--footer-z);
   overflow: visible;
 }
 
-/* Ensure social-links is a proper flex list and anchor is the hit target */
 .social-links {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 0.5rem;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   list-style: none;
-  position: relative; /* keeps it above basic content if necessary */
-  z-index: 2000;
-  overflow: visible;
+  align-items: center;
 }
 
 .social-links li {
   margin: 0.25rem;
-  display: inline-flex;
+  list-style: none;
 }
 
-/* Make anchor the circular clickable area; inner icon scales inside it */
 .social-links li a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--social-size, 48px);
-  height: var(--social-size, 48px);
+  width: var(--social-size);
+  height: var(--social-size);
   min-width: 44px;
   min-height: 44px;
   border-radius: 50%;
-  background: var(--social-bg, #313131);
-  color: var(--social-color, #fafafa);
+  background: var(--social-bg);
+  color: var(--social-color);
   text-decoration: none;
   transition: background 0.25s ease, transform 0.15s ease;
 }
+.social-links li a:hover,
+.social-links li a:focus {
+  background: #e84610;
+  transform: translateY(-2px);
+  outline: none;
+}
 
+/* Icon sizing: let icons scale inside the circular anchor */
 .social-links li a i,
 .social-links li a svg {
   width: 60%;
@@ -75,10 +225,52 @@ footer#contact,
   fill: currentColor;
 }
 
-/* mobile sizing */
+/* Small screens: enlarge touch targets */
 @media (max-width: 576px) {
   .social-links li a {
-    width: var(--social-size-sm, 44px);
-    height: var(--social-size-sm, 44px);
+    width: var(--social-size-sm);
+    height: var(--social-size-sm);
   }
+  .social-links li a i,
+  .social-links li a svg { font-size: 1.25rem; }
+}
+
+/* --------------------
+   Dropdowns / stacking / clipping fixes (targeted)
+   -------------------- */
+/* Keep dropdowns above footer/content */
+.dropdown-menu { z-index: var(--dropdown-z); }
+
+/* Only remove clipping on the specific containers that caused issues.
+   Avoid !important and broad selectors. If other specific ancestors
+   are known to clip, target them here (e.g. .my-hero-overlay). */
+@media (max-width: 1024px) {
+  .reasons-container,
+  .signup-form,
+  .jumbotron {
+    overflow: visible;
+  }
+  .dropdown-menu { position: absolute; }
+}
+
+/* --------------------
+   Responsive breakpoints (grouped)
+   -------------------- */
+@media screen and (min-width: 576px) {
+  #contact .welcome { font-size: 2.5rem; }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-css { padding: 0 20px; font-size: 1rem; }
+  .all-spa { font-size: 26px; }
+  #navbar .navbar-brand img,
+  #navbar img { max-height: 64px; }
+  .section { margin-top: 2rem; margin-bottom: 1rem; }
+}
+
+@media screen and (min-width: 992px) {
+  #contact { text-align: left; }
+  #contact .welcome { font-size: 4rem; margin-top: 20px; }
+  #navbar .navbar-brand img,
+  #navbar img { max-height: 80px; }
 }
