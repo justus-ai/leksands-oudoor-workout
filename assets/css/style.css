@@ -46,11 +46,6 @@ body::before {
   pointer-events: none;   /* doesn't intercept clicks */
 }
 
-/* Optional: make pseudo-element non-fixed on small screens for better perf/UX */
-@media (max-width: 768px) {
-  body::before { position: absolute; }
-}
-
 /* Headings */
 h1 { font-weight: 500; }
 
@@ -114,18 +109,19 @@ h1 { font-weight: 500; }
    -------------------- */
 .quotes-container {
   color: whitesmoke;
-  background-color: rgb(34,34,34);
+  background-color: rgba(20, 20, 20, 0.55);
   font-weight: 400;
   font-size: 0.95rem;
   text-align: center;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 .quotes-container:hover,
 .quotes-container:focus {
-  background-color: #0c0c0c;
+  background-color: rgba(12, 12, 12, 0.72);
   color: #e84610;
 }
 /* Ensure Bootstrap's muted figcaption is readable on dark cards */
@@ -158,6 +154,11 @@ h1 { font-weight: 500; }
 
 .testimonial-row {
   margin-top: 0.5rem;
+}
+
+.testimonial-item {
+  flex: 0 0 50%;
+  max-width: 50%;
 }
 
 .testimonial-card {
@@ -321,6 +322,19 @@ footer#contact,
 
 /* Small screens: enlarge touch targets */
 @media (max-width: 576px) {
+  .testimonial-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    --bs-gutter-x: 0.35rem;
+    --bs-gutter-y: 0.35rem;
+  }
+
+  .testimonial-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
   .signup-form {
     padding: 20px;
   }
@@ -356,11 +370,6 @@ footer#contact,
     font-size: 0.95rem;
   }
 
-  .testimonial-row {
-    --bs-gutter-x: 0.35rem;
-    --bs-gutter-y: 0.35rem;
-  }
-
   .testimonial-card {
     padding: 0.45rem;
     border-radius: 10px;
@@ -373,6 +382,8 @@ footer#contact,
   .testimonial-card p {
     font-size: 0.68rem;
     line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 
   .testimonial-card .blockquote-footer {
