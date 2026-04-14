@@ -322,6 +322,42 @@ footer#contact,
 
 /* Small screens: enlarge touch targets */
 @media (max-width: 576px) {
+  .home-page .reasons-container {
+    min-height: auto;
+  }
+
+  .home-page .signup-form {
+    margin: 10px auto 12px;
+    padding: 18px;
+  }
+
+  .home-page .signup-form h2 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+  }
+
+  .home-page .signup-form p {
+    margin-bottom: 0.55rem;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+
+  .home-page .testimonial-section {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .home-page .testimonial-section h2 {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 1.2rem;
+  }
+
+  .home-page .testimonial-section .h5 {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+  }
+
   .testimonial-row {
     display: flex;
     flex-wrap: nowrap;
