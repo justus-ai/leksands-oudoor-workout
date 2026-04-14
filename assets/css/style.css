@@ -8,9 +8,9 @@
   --button-bg-color: #93402a;
   --button-text-color: #fff;
   --button-hover-color: #cd976f;
-  --navbar-height: 90px;
+  --navbar-height: 110px;
   --dropdown-z: 3000; /* dropdowns above normal content */
-  --footer-z: 2000;   /* footer above content but below dropdowns/modals */
+  --footer-z: 4000;   /* keep social footer visible above page dropdowns */
   --social-size: 45px;
   --social-size-sm: 52px;
   --social-bg: #313131;
@@ -25,7 +25,7 @@ html, body { height: 100%; }
 body {
   font-family: var(--secondary-font);
   color: var(--text-color);
-  padding-top: 70px;
+  padding-top: var(--navbar-height);
   padding-bottom: 90px; /* prevent content hiding behind fixed footer */
   margin: 0;
   background: none; /* background moved to pseudo-element below */
@@ -83,15 +83,16 @@ h1 { font-weight: 500; }
 .navbar {
   background-color: var(--nav-color);
   text-align: center;
-  padding: 0.4rem 0;
+  min-height: var(--navbar-height);
+  padding: 0.5rem 0;
 }
 #navbar .navbar-brand img,
 #navbar img {
   display: block;
-  width: 70px;
-  height: 70px;
-  max-width: 70px;
-  max-height: 70px;
+  width: calc(var(--navbar-height) - 20px);
+  height: calc(var(--navbar-height) - 20px);
+  max-width: calc(var(--navbar-height) - 20px);
+  max-height: calc(var(--navbar-height) - 20px);
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #e84610;
@@ -153,6 +154,26 @@ h1 { font-weight: 500; }
 }
 .testimonial-section .fa-star {
   color: #f5a623;
+}
+
+.testimonial-row {
+  margin-top: 0.5rem;
+}
+
+.testimonial-card {
+  padding: 1rem;
+  margin-bottom: 0;
+  min-height: 100%;
+}
+
+.testimonial-card .blockquote {
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card p {
+  font-size: 0.92rem;
+  line-height: 1.35;
+  margin-bottom: 0;
 }
 
 /* --------------------
@@ -274,12 +295,50 @@ footer#contact,
 
 /* Small screens: enlarge touch targets */
 @media (max-width: 576px) {
+  .social-links {
+    gap: 0.25rem;
+    flex-wrap: nowrap;
+  }
+
+  .social-links li {
+    margin: 0.1rem;
+  }
+
   .social-links li a {
-    width: var(--social-size-sm);
-    height: var(--social-size-sm);
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
   }
   .social-links li a i,
-  .social-links li a svg { font-size: 1.25rem; }
+  .social-links li a svg {
+    width: 40px;
+    height: 40px;
+    font-size: 0.95rem;
+  }
+
+  .testimonial-row {
+    --bs-gutter-x: 0.35rem;
+    --bs-gutter-y: 0.35rem;
+  }
+
+  .testimonial-card {
+    padding: 0.45rem;
+    border-radius: 10px;
+  }
+
+  .testimonial-card .img-reviews {
+    display: none;
+  }
+
+  .testimonial-card p {
+    font-size: 0.68rem;
+    line-height: 1.2;
+  }
+
+  .testimonial-card .blockquote-footer {
+    font-size: 0.62rem;
+  }
 }
 
 /* --------------------
