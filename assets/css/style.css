@@ -104,12 +104,29 @@ h1 { font-weight: 500; }
   margin-top: 0;
 }
 
+.home-page .reasons-container {
+  min-height: auto;
+}
+
+.home-page .signup-form {
+  margin: 10px auto 12px;
+}
+
+.home-page .testimonial-section {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.home-page .testimonial-section h2 {
+  margin-top: 0.25rem;
+}
+
 /* --------------------
    Quotes / testimonials
    -------------------- */
 .quotes-container {
   color: whitesmoke;
-  background-color: rgba(20, 20, 20, 0.55);
+  background-color: rgba(60,60,60,0.6);
   font-weight: 400;
   font-size: 0.95rem;
   text-align: center;
@@ -121,7 +138,7 @@ h1 { font-weight: 500; }
 }
 .quotes-container:hover,
 .quotes-container:focus {
-  background-color: rgba(12, 12, 12, 0.72);
+  background-color: rgba(45,45,45,0.72);
   color: #e84610;
 }
 /* Ensure Bootstrap's muted figcaption is readable on dark cards */
