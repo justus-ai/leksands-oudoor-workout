@@ -115,6 +115,10 @@ h1 { font-weight: 500; }
 .home-page .testimonial-section {
   margin-top: 0;
   padding-top: 0;
+  max-width: 760px;
+  width: calc(100% - 2rem);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-page .testimonial-section h2 {
@@ -174,8 +178,15 @@ h1 { font-weight: 500; }
 }
 
 .testimonial-item {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .testimonial-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 .testimonial-card {
