@@ -26,9 +26,12 @@ My logo is a pitxture of lady outdoor in the sun with the words leksand outdor w
  So at the the beginning of every container section from  the top of each page , I added  a fixed bottom and fixed bottom so even when you scroll up and down, the header and the footer remain visible, to maintain uniformity.
  3.I added a hover effect alongside each reason to work out listed ,for UX to entice the user while they slide their mouse across the screen.
  #### QUOTES
+ 
 1.I put in a hover feature as well that changes the font color to an orange color to entice the casual reader to read the testimonies of people who have tried and succeded with these type of excercises.
 
- 2. For smaller screens, I used bootsrap's responsive feature that altered the  visibility  of the two pictures on the quotes section so that there are no pictured for smaller hand helt devices but  just text as shown above.
+ 2. For smaller screens, I used bootsrap's responsive feature that altered the  visibility  of the two pictures on the quotes section so that there are no pictured for smaller hand helt devices but  just text as shown:
+ 3. <img width="312" height="554" alt="Screenshot (893)" src="https://github.com/user-attachments/assets/eac1c2c1-c337-4882-ac68-15492529b99e" />
+
 
  #### SOCIAL MEDIA
  1.Social media links to:
@@ -76,11 +79,7 @@ My logo is a pitxture of lady outdoor in the sun with the words leksand outdor w
  I tried to use flex but on closer inspection not all the text was displaying on the mobile phone screen, I had trouble trying to solve this bug .
  
    #VALIDATOR TESTING
-   I used the windows  dev tools to check the performance of the website . No issues were detected 
- ![Screenshot (375)](https://user-images.githubusercontent.com/83753891/136636483-5476267c-1588-4fc8-b5f8-e14c3a928ae1.png)
-
-  
-   
+   I used the windows  dev tools to check the performance of the website . No issues were detected  
   
    ##UNFIXED BUGS
  None
