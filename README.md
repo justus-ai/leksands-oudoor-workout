@@ -4,7 +4,8 @@ The goal is to stay active outside the traditional methods of training primarily
 Leksand is a small town in the country side where i curently live .It has varst forests, trails and the nature is breathtaking. found in the countr.It is known for its near perfect outdoors hence why i thought the name was befitting."Lek"means play in swedish
 The target will be the whole body for each workout in a playful and results evoking new style called Hiit(Hight Intensity Interval Training) .All these workouts can be done in the comfort of your home but if the weather allows, its  even better outdoors.
  Your body weight is the primary excercise tool .
- <img width="1366" height="768" alt="Screenshot (887)" src="https://github.com/user-attachments/assets/9a9cfc15-5232-4dda-a3af-367f0e0c5b44" />
+<img width="1366" height="768" alt="Screenshot (899)" src="https://github.com/user-attachments/assets/2395e262-4bb9-4140-aae2-13080c8dd49e" />
+
 
  Below is a repsonsive view  for smaller screens such as iphones:
  
