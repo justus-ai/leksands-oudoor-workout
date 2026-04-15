@@ -4,9 +4,10 @@ The goal is to stay active outside the traditional methods.
 Leksand is a found in the countryside in Sweden.It is very well known for its green forests, trails and perfect outdoors hence why i thought the name was befitting.Lek means play and land means country in Swedish .
 The target will be the whole body for each workout in a playful and results evoking new style called Hiit(Hight Intensity Interval Training) .All these workouts can be done in the comfort of your home but if the weather allows, its better yet outdoors.
  Your body weight is the primary excercise tool .
- ![Screenshot (362)](https://user-images.githubusercontent.com/83753891/136630706-94b7d235-df01-4775-b18e-e4d3c9ee5cd2.png)
+ <img width="1366" height="768" alt="Screenshot (887)" src="https://github.com/user-attachments/assets/9a9cfc15-5232-4dda-a3af-367f0e0c5b44" />
+
  Responsive website feature for smaller screens for a screen as asmall as an iphone X
- ![Screenshot (364)](https://user-images.githubusercontent.com/83753891/136631475-0164689c-524f-4e22-b8f9-63385f2ddc3b.png)
+
 
 ## FEATURES
 ### NAVIGATION BAR
@@ -59,8 +60,10 @@ I chose it because the chainlynk symbol symbolises strength.In this case, combin
 ![Screenshot (324)](https://user-images.githubusercontent.com/83753891/131588066-2beef495-d94a-4d73-b272-9c06a0cdab89.png)
  The abave is a screenshot of my responsive join webpage. As metioned earlier,the code is inspired by the love running website from the tutorials that i thought were very effective  in getting one to join.The join page is essential to get more people to want to be a part of active lifestyle.
  The form is responsive and can only be entered successfully if the first name, second name and email are ALL entered .
-![Screenshot (323)](https://user-images.githubusercontent.com/83753891/131588088-0a04345b-8981-46c4-80aa-652548f01dd0.png)
- above the screenshot of how the join page would look like on a mobile device .
+ Below the screenshot of how the join page would look like on a mobile device .
+<img width="318" height="557" alt="Screenshot (892)" src="https://github.com/user-attachments/assets/cfa26632-1666-4987-b8e3-afcf5a4b7e36" />
+
+
  
  ####  Features left to implement 
  1.In the future i would like to add animation to the chain link so that it stretches to enhance user experience and to strengthen the presence of my logo.
