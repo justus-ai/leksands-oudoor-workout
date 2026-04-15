@@ -3,11 +3,13 @@
   --secondary-font: 'Lexend', sans-serif;
   --nav-color: #3E4041;
   --background-image: url("../images/forest.jpg");
+  --accent-color: #e84610;
+  --accent-ring: rgba(232,70,16,0.12);
   --text-color: #FFFFFF;
-  --text-hover-color: #836a5c;
+  --text-hover-color: var(--accent-color);
   --button-bg-color: #93402a;
   --button-text-color: #fff;
-  --button-hover-color: #cd976f;
+  --button-hover-color: var(--accent-color);
   --navbar-height: 110px;
   --dropdown-z: 3000; /* dropdowns above normal content */
   --footer-z: 4000;   /* keep social footer visible above page dropdowns */
@@ -31,6 +33,19 @@ body {
   background: none; /* background moved to pseudo-element below */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.home-page {
+  padding-bottom: 78px;
+  overflow: hidden;
+}
+
+.home-page main {
+  height: calc(100dvh - var(--navbar-height) - 78px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* Background placed behind everything to avoid stacking/context issues */
@@ -81,6 +96,18 @@ h1 { font-weight: 500; }
   min-height: var(--navbar-height);
   padding: 0.5rem 0;
 }
+
+#navbar .nav-link {
+  color: var(--text-color);
+  transition: color 0.25s ease;
+}
+
+#navbar .nav-link:hover,
+#navbar .nav-link:focus,
+#navbar .nav-link.active {
+  color: var(--text-hover-color);
+}
+
 #navbar .navbar-brand img,
 #navbar img {
   display: block;
@@ -90,7 +117,7 @@ h1 { font-weight: 500; }
   max-height: calc(var(--navbar-height) - 20px);
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #e84610;
+  border: 3px solid var(--accent-color);
 }
 
 /* --------------------
@@ -106,32 +133,56 @@ h1 { font-weight: 500; }
 
 .home-page .reasons-container {
   min-height: auto;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0;
 }
 
 .home-page .signup-form {
   margin: 10px auto 12px;
 }
 
+.home-page .reasons-container .signup-form {
+  margin: 4px auto 6px;
+  padding: clamp(10px, 1.8vh, 16px) clamp(14px, 2.1vw, 20px) clamp(8px, 1.4vh, 14px);
+}
+
+.home-page .reasons-container .jumbotron-header {
+  margin-bottom: 0.35rem;
+  font-size: clamp(1.05rem, 1.8vh + 0.35rem, 1.5rem);
+  line-height: 1.2;
+}
+
+.home-page .reasons-container .signup-form p {
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+  font-size: clamp(0.82rem, 0.95vh + 0.35rem, 0.92rem);
+}
+
+.home-page .reasons-container .signup-form p:last-of-type {
+  margin-bottom: 0;
+}
+
 .home-page .testimonial-section {
   margin-top: 0;
   padding-top: 0;
-  max-width: 620px;
+  max-width: 560px;
   width: calc(100% - 2rem);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
 }
 
 .home-page .testimonial-section h2,
 .home-page .testimonial-title {
-  margin-top: 0.2rem;
-  margin-bottom: 0.35rem;
-  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  margin-top: 0.1rem;
+  margin-bottom: 0.2rem;
+  font-size: clamp(0.98rem, 1.2vh + 0.35rem, 1.25rem);
   line-height: 1.2;
 }
 
 .home-page .testimonial-stars {
-  margin-bottom: 0.2rem;
-  font-size: 0.95rem;
+  margin-bottom: 0.1rem;
+  font-size: clamp(0.75rem, 0.9vh + 0.3rem, 0.9rem);
 }
 
 /* --------------------
@@ -152,14 +203,14 @@ h1 { font-weight: 500; }
 .quotes-container:hover,
 .quotes-container:focus {
   background-color: rgba(45,45,45,0.72);
-  color: #e84610;
+  color: var(--text-hover-color);
 }
 /* Ensure Bootstrap's muted figcaption is readable on dark cards */
 .quotes-container .blockquote-footer {
   color: #bbb;
 }
 .quotes-container .blockquote-footer:hover {
-  color: #e84610;
+  color: var(--text-hover-color);
 }
 
 /* Circular review images */
@@ -169,7 +220,7 @@ h1 { font-weight: 500; }
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 3px solid #e84610;
+  border: 3px solid var(--accent-color);
 }
 
 /* Testimonial section heading visible over background */
@@ -183,7 +234,8 @@ h1 { font-weight: 500; }
 }
 
 .testimonial-row {
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
+  --bs-gutter-y: 0.25rem;
 }
 
 .testimonial-item {
@@ -199,7 +251,7 @@ h1 { font-weight: 500; }
 }
 
 .testimonial-card {
-  padding: 1rem;
+  padding: clamp(0.45rem, 0.85vh, 0.75rem);
   margin-bottom: 0;
   min-height: 100%;
 }
@@ -209,8 +261,8 @@ h1 { font-weight: 500; }
 }
 
 .testimonial-card p {
-  font-size: 0.92rem;
-  line-height: 1.35;
+  font-size: clamp(0.72rem, 0.85vh + 0.28rem, 0.88rem);
+  line-height: 1.22;
   margin-bottom: 0;
 }
 
@@ -240,13 +292,13 @@ h1 { font-weight: 500; }
   padding: 6px 8px;
   box-sizing: border-box;
 }
-.text-input:focus { border-color: #e84610; outline: none; }
+.text-input:focus { border-color: var(--accent-color); outline: 3px solid var(--accent-ring); }
 
 .join-button {
   margin-top: 20px;
   border-radius: 4px;
   padding: 12px 30px;
-  background-color: #e84610;
+  background-color: var(--accent-color);
   color: #fafafa;
   border: none;
   cursor: pointer;
@@ -254,8 +306,8 @@ h1 { font-weight: 500; }
 .join-button:hover,
 .join-button:focus {
   background-color: #fafafa;
-  color: #e84610;
-  outline: 3px solid rgba(232,70,16,0.12);
+  color: var(--text-hover-color);
+  outline: 3px solid var(--accent-ring);
 }
 
 .signup-form .btn-group {
@@ -337,7 +389,7 @@ footer#contact,
 }
 .social-links li a:hover,
 .social-links li a:focus {
-  background: #e84610;
+  background: var(--accent-color);
   transform: translateY(-2px);
   outline: none;
 }
@@ -352,15 +404,24 @@ footer#contact,
   justify-content: center;
   border-radius: 50%;
   font-size: 18px;
-  color: #fafafa;
-  background: #313131;
-  transition: background 0.35s, transform 0.2s; 
+  color: inherit;
+  background: transparent;
+  transition: color 0.25s ease, transform 0.2s;
 }
 
 /* Small screens: enlarge touch targets */
 @media (max-width: 576px) {
+  .home-page {
+    padding-bottom: 74px;
+  }
+
+  .home-page main {
+    height: calc(100dvh - var(--navbar-height) - 74px);
+  }
+
   .home-page .reasons-container {
     min-height: auto;
+    padding-bottom: 0.15rem;
   }
 
   .home-page .signup-form {
@@ -368,9 +429,19 @@ footer#contact,
     padding: 18px;
   }
 
+  .home-page .reasons-container .signup-form {
+    margin: 4px auto;
+    padding: 10px 12px 9px;
+  }
+
   .home-page .signup-form h2 {
     margin-bottom: 12px;
     font-size: 1.2rem;
+  }
+
+  .home-page .reasons-container .jumbotron-header {
+    margin-bottom: 0.22rem;
+    font-size: 0.92rem;
   }
 
   .home-page .signup-form p {
@@ -379,29 +450,36 @@ footer#contact,
     line-height: 1.25;
   }
 
+  .home-page .reasons-container .signup-form p {
+    margin-bottom: 0.18rem;
+    font-size: 0.74rem;
+    line-height: 1.12;
+  }
+
   .home-page .testimonial-section {
     margin-top: 0;
     padding-top: 0;
+    width: calc(100% - 1rem);
   }
 
   .home-page .testimonial-section h2,
   .home-page .testimonial-title {
-    margin-top: 0.15rem !important;
-    margin-bottom: 0.3rem !important;
-    font-size: 1.05rem;
+    margin-top: 0.05rem !important;
+    margin-bottom: 0.18rem !important;
+    font-size: 0.88rem;
   }
 
   .home-page .testimonial-stars {
-    margin-bottom: 0.25rem;
-    font-size: 0.85rem;
+    margin-bottom: 0.14rem;
+    font-size: 0.72rem;
   }
 
   .testimonial-row {
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
-    --bs-gutter-x: 0.35rem;
-    --bs-gutter-y: 0.35rem;
+    --bs-gutter-x: 0.28rem;
+    --bs-gutter-y: 0.2rem;
   }
 
   .testimonial-item {
@@ -445,7 +523,7 @@ footer#contact,
   }
 
   .testimonial-card {
-    padding: 0.45rem;
+    padding: 0.35rem;
     border-radius: 10px;
   }
 
@@ -454,14 +532,14 @@ footer#contact,
   }
 
   .testimonial-card p {
-    font-size: 0.68rem;
-    line-height: 1.2;
+    font-size: 0.62rem;
+    line-height: 1.1;
     word-break: break-word;
     overflow-wrap: anywhere;
   }
 
   .testimonial-card .blockquote-footer {
-    font-size: 0.62rem;
+    font-size: 0.56rem;
   }
 }
 

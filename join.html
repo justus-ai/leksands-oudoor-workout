@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+<body>
         <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html"><img src="assets/images/logo.webp" alt="Leksand's Outdoor Workout Logo"></a>
@@ -33,14 +34,13 @@
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="join.html" class="btn ms-lg-3 btn-css">join</a>
+            <a class="btn ms-lg-3 btn-css active" aria-current="page" href="join.html">Join</a>
           </li>
 
         </ul>
       </div>
     </div>
   </nav>
-<body>
 
      <!--the sign up page for the  workout outside-->
      <div  class =" container-fluid reasons-container">
@@ -56,13 +56,13 @@
           <input type="text" name="last_name" id="lname" required class="text-input">
            <label for="email">Email Address</label>
           <input type="email" name="email_address" id="email" required class="text-input">
-          <label for="road"> 15 min</label>
+          <label for="quarter">15 min</label>
           <input type="radio" id="quarter" name="running_preference" value="quarter" required>  
-          <label for="trail"> 30 min</label>
+          <label for="half">30 min</label>
           <input type="radio" id="half" name="running_preference" value="half">  
-           <label for="both">1 hour</label>
+           <label for="full">1 hour</label>
           <input type="radio" id="full" name="running_preference" value="full">  
-          <label for="both">Limitless</label>
+          <label for="limitless">Limitless</label>
           <input type="radio" id="limitless" name="running_preference" value="limitless">  
       
           <input type="submit" value="join!" class="join-button">
