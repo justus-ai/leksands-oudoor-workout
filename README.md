@@ -4,6 +4,9 @@ The goal is to stay active outside the traditional methods of training primarily
 Leksand is a small town in the country side where i curently live .It has varst forests, trails and the nature is breathtaking. found in the countr.It is known for its near perfect outdoors hence why i thought the name was befitting."Lek"means play in swedish
 The target will be the whole body for each workout in a playful and results evoking new style called Hiit(Hight Intensity Interval Training) .All these workouts can be done in the comfort of your home but if the weather allows, its  even better outdoors.
  Your body weight is the primary excercise tool .
+
+ ### HOME PAGE
+ 
 <img width="1366" height="768" alt="Screenshot (899)" src="https://github.com/user-attachments/assets/2395e262-4bb9-4140-aae2-13080c8dd49e" />
 
 
@@ -16,7 +19,7 @@ The target will be the whole body for each workout in a playful and results evok
 ### NAVIGATION BAR
 I used the responsive bootstrap navigation bar because it allows for the menu bar to be reduced and expanded easily depending on the screen size being used .
 In  smaller screens, I incooperated the hamburger icon that makes the text at the top disappear and is replaced by the three lines as is illuastrated above in the home page smallscreen responsive screenshot.
-### HOME PAGE
+
 #### LOGO
 My logo is a pitxture of lady outdoor in the sun with the words leksand outdor workout I thought it was befitting is picorial reppresantion of the euphoria of being outdors .I created the logo withthe help of Canva Logo Maker.
 
