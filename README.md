@@ -18,6 +18,7 @@ In  smaller screens, I incooperated the hamburger icon that makes the text at th
 ### HOME PAGE
 #### LOGO
 My logo is a pitxture of lady outdoor in the sun with the words leksand outdor workout I thought it was befitting is picorial reppresantion of the euphoria of being outdors .I created the logo withthe help of Canva Logo Maker.
+
 <img width="98" height="108" alt="Screenshot (894)" src="https://github.com/user-attachments/assets/2f2d1eb7-b377-46e6-a426-86500ca0b03e" />
 
 #### REASONS FOR WORKING OUT OUTSIDE
@@ -31,7 +32,8 @@ My logo is a pitxture of lady outdoor in the sun with the words leksand outdor w
 1.I put in a hover feature as well that changes the font color to an orange color to entice the casual reader to read the testimonies of people who have tried and succeded with these type of excercises.
 
  2. For smaller screens, I used bootsrap's responsive feature that altered the  visibility  of the two pictures on the quotes section so that there are no pictured for smaller hand helt devices but  just text as shown:
- 3. <img width="312" height="554" alt="Screenshot (893)" src="https://github.com/user-attachments/assets/eac1c2c1-c337-4882-ac68-15492529b99e" />
+ 3. 
+<img width="312" height="554" alt="Screenshot (893)" src="https://github.com/user-attachments/assets/eac1c2c1-c337-4882-ac68-15492529b99e" />
 
 
  #### SOCIAL MEDIA
@@ -40,10 +42,11 @@ My logo is a pitxture of lady outdoor in the sun with the words leksand outdor w
  2.All media icons are clickable and open in a new page associated with the media icon.
  3.I also included a hover effect to enhance UX.
 
- <img width="314" height="82" alt="Screenshot (888)" src="https://github.com/user-attachments/assets/3b5060fb-3f41-4c2c-b904-fc0749abb4ef" />
+<img width="314" height="82" alt="Screenshot (888)" src="https://github.com/user-attachments/assets/3b5060fb-3f41-4c2c-b904-fc0749abb4ef" />
  
 ### ABOUT PAGE
- <img width="1366" height="768" alt="Screenshot (885)" src="https://github.com/user-attachments/assets/908a9023-00fe-416f-a4a7-249864f9b353" />
+
+<img width="1366" height="768" alt="Screenshot (885)" src="https://github.com/user-attachments/assets/908a9023-00fe-416f-a4a7-249864f9b353" />
 
  
 1. This page goes deeper into details of what an outdoor workout routine would entail.Again this is regardless of location .With the entrace of the corona virus, alot of emphasis on keeping ones distance has made it such that anywhee you are is as good as you make it.
@@ -57,17 +60,21 @@ My logo is a pitxture of lady outdoor in the sun with the words leksand outdor w
 <img width="1366" height="768" alt="Screenshot (898)" src="https://github.com/user-attachments/assets/0a507a39-2806-452d-b4f0-b09debc1de60" />
 
 
- The about page is also responsive to different screen sizes with the help of bootstrap.
+The about page is also responsive to different screen sizes with the help of bootstrap.
+
 <img width="320" height="556" alt="Screenshot (889)" src="https://github.com/user-attachments/assets/fd5736b2-a17b-4cd4-bc68-9d2e0d6a769a" />
 
  
   ### JOIN THE MOVEMENT PAGE
+  
 <img width="1366" height="768" alt="Screenshot (891)" src="https://github.com/user-attachments/assets/4e423864-df86-4e4c-86e0-841ae6b8b8c0" />
 
 
  The abave is a screenshot of my responsive join webpage. As metioned earlier,the code is inspired by the love running website from the tutorials that i thought were very effective  in getting one to join.The join page is essential to get more people to want to be a part of active lifestyle.
  The form is responsive and can only be entered successfully if the first name, second name and email are ALL entered .
  Below the screenshot of how the join page would look like on a mobile device .
+
+ 
 <img width="318" height="557" alt="Screenshot (892)" src="https://github.com/user-attachments/assets/e8821368-af3d-40f6-b85d-ba824dc7f94c" />
 
 
