@@ -44,7 +44,7 @@ My logo is a pitxture of lady outdoor in the sun with the words leksand outdor w
 
 <img width="314" height="82" alt="Screenshot (888)" src="https://github.com/user-attachments/assets/3b5060fb-3f41-4c2c-b904-fc0749abb4ef" />
  
-### ABOUT PAGE
+#### ABOUT PAGE
 
 <img width="1366" height="768" alt="Screenshot (885)" src="https://github.com/user-attachments/assets/908a9023-00fe-416f-a4a7-249864f9b353" />
 
@@ -65,7 +65,7 @@ The about page is also responsive to different screen sizes with the help of boo
 <img width="320" height="556" alt="Screenshot (889)" src="https://github.com/user-attachments/assets/fd5736b2-a17b-4cd4-bc68-9d2e0d6a769a" />
 
  
-  ### JOIN THE MOVEMENT PAGE
+ ### JOIN THE MOVEMENT PAGE
   
 <img width="1366" height="768" alt="Screenshot (891)" src="https://github.com/user-attachments/assets/4e423864-df86-4e4c-86e0-841ae6b8b8c0" />
 
@@ -86,10 +86,10 @@ The about page is also responsive to different screen sizes with the help of boo
  #### coding challenge 
  I tried to use flex but on closer inspection not all the text was displaying on the mobile phone screen, I had trouble trying to solve this bug .
  
-   #VALIDATOR TESTING
+   # VALIDATOR TESTING
    I used the windows  dev tools to check the performance of the website . No issues were detected  
   
-   ##UNFIXED BUGS
+   ## UNFIXED BUGS
  None
    
    #DEPLOYMENT
