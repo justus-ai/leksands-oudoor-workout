@@ -7,7 +7,8 @@ The target will be the whole body for each workout in a playful and results evok
  <img width="1366" height="768" alt="Screenshot (887)" src="https://github.com/user-attachments/assets/9a9cfc15-5232-4dda-a3af-367f0e0c5b44" />
 
  Below is a repsonsive view  for smaller screens such as iphones:
- <img width="312" height="554" alt="Screenshot (893)" src="https://github.com/user-attachments/assets/5e22a7ff-4710-429c-b6c4-6b69aeee56e4" />
+ 
+<img width="312" height="554" alt="Screenshot (893)" src="https://github.com/user-attachments/assets/5e22a7ff-4710-429c-b6c4-6b69aeee56e4" />
  
 
 ## FEATURES
