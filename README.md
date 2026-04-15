@@ -33,7 +33,7 @@ My logo is a pitxture of lady outdoor in the sun with the words leksand outdor w
 1.I put in a hover feature as well that changes the font color to an orange color to entice the casual reader to read the testimonies of people who have tried and succeded with these type of excercises.
 
  2. For smaller screens, I used bootsrap's responsive feature that altered the  visibility  of the two pictures on the quotes section so that there are no pictured for smaller hand helt devices but  just text as shown:
- 3. 
+
 <img width="312" height="554" alt="Screenshot (893)" src="https://github.com/user-attachments/assets/eac1c2c1-c337-4882-ac68-15492529b99e" />
 
 
